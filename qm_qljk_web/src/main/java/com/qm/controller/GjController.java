@@ -14,6 +14,7 @@ public class GjController {
         for (int i = 0; i <GjData.length ; i++) {
 
             System.out.println(GjData[i]);
+            //aaaaaaaaaaaaaaaaaa
         }
 
     }
