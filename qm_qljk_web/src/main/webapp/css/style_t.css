@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #25f4e6;
+}
+ul {
+  list-style: none;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.pad {
+  padding-left: 5px;
+}
+.lichenggaikuang {
+  width: 100%;
+  height: 230px ;
+  background: #081832;
+}
+.lichenggaikuang .top {
+  padding: 40px 0 50px 0;
+  position: relative;
+}
+.lichenggaikuang .top .top-left a {
+  float: left;
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 30px;
+  background: #04425f;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 1px #59c0e4;
+}
+.lichenggaikuang .top .top-left a img {
+  float: left;
+  margin: 2px 0 0 10px;
+  width: 25px;
+  height: 25px;
+}
+.lichenggaikuang .top .top-left a span {
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.lichenggaikuang .top .top-right {
+  position: absolute;
+  display: flex;
+  top: 20%;
+  right: 3%;
+  padding: 10px 1px;
+  width: 285px;
+  height: 75px;
+  background: #142132;
+  border-radius: 3px;
+  box-shadow: 0px 1px 5px 0px #59c0e4;
+}
+.lichenggaikuang .top .top-right .time,
+.lichenggaikuang .top .top-right .weather {
+  flex: 1;
+}
+.lichenggaikuang .top .top-right .time {
+  color: #cedef7;
+  border-right: 1px solid #cedef7;
+}
+.lichenggaikuang .top .top-right .time  {
+  text-align: center;
+  margin: 0px 0  5px 0;
+}
+.lichenggaikuang .top .top-right .time  p {
+  font-size: 5px;
+  color: #fff;
+}
+/*.lichenggaikuang .top .time .week {
+  padding-left: 10px;
+}
+.lichenggaikuang .top .time .week i {
+  float: left;
+  font-style: normal;
+  font-size: 12px;
+}*/
+.lichenggaikuang .weather {
+  display: flex;
+}
+.lichenggaikuang .weather img {
+  margin-top: 8px;
+  margin-left: 8px;
+  width: 45px;
+  height: 35px;
+}
+.lichenggaikuang .weather p {
+  padding-left: 8px;
+  color: #cedef7;
+  font-size: 12px;
+}
+.lichenggaikuang .weather p:first-child {
+  margin-top: 3px;
+}
+.bottom ul {
+  display: flex;
+}
+.bottom ul li {
+  padding: 0 10px;
+  flex: 1;
+}
+.bottom ul li .box-color {
+  height: 100%;
+  background: #034c6a;
+}
+.bottom ul li .left-1 {
+  padding: 15px  0 15px 40px;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.bottom ul li .left-1 img {
+  float: left;
+  margin: 0 10px 0 10px;
+}
+.bottom ul li .left-1 p {
+  margin: -3px 0 5px 20px;
+  color: #fff;
+  font-size: 12px;
+}
+.bottom ul li .left-1 span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff42;
+}
+.bottom ul li .right-1 {
+  float: right;
+  padding: 15px  0 15px 40px;
+  width: 50%;
+  height: 100%;
+}
+.bottom ul li .right-1 img {
+  float: left;
+  margin-right: 10px;
+}
+.bottom ul li .right-1 p {
+  color: #fff;
+  font-size: 12px;
+}
+.bottom ul li .right-1 span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff42;
+}
+.bottom ul li .left-2 {
+  padding: 15px  0 15px 40px;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.bottom ul li .left-2 img {
+  float: left;
+  margin: 0 10px 0 10px;
+}
+.bottom ul li .left-2 p {
+  margin: -3px 0 5px 20px;
+  color: #fff;
+  font-size: 12px;
+}
+.bottom ul li .left-2 span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff42;
+}
+.bottom ul li .left-2 span {
+  color: #25f3e6;
+}
+.bottom ul li .right-2 {
+  float: right;
+  padding: 15px  0 15px 40px;
+  width: 50%;
+  height: 100%;
+}
+.bottom ul li .right-2 img {
+  float: left;
+  margin-right: 10px;
+}
+.bottom ul li .right-2 p {
+  color: #fff;
+  font-size: 12px;
+}
+.bottom ul li .right-2 span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff42;
+}
+.bottom ul li .right-2 span {
+  color: #25f3e6;
+}
+.bottom ul li .left-3 {
+  padding: 15px  0 15px 40px;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.bottom ul li .left-3 img {
+  float: left;
+  margin: 0 10px 0 10px;
+}
+.bottom ul li .left-3 p {
+  margin: -3px 0 5px 20px;
+  color: #fff;
+  font-size: 12px;
+}
+.bottom ul li .left-3 span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff42;
+}
+.bottom ul li .left-3 span {
+  color: #ff4e4c;
+}
+.bottom ul li .right-3 {
+  float: right;
+  padding: 15px  0 15px 40px;
+  width: 50%;
+  height: 100%;
+}
+.bottom ul li .right-3 img {
+  float: left;
+  margin-right: 10px;
+}
+.bottom ul li .right-3 p {
+  color: #fff;
+  font-size: 12px;
+}
+.bottom ul li .right-3 span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff42;
+}
+.bottom ul li .right-3 span {
+  color: #ff4e4c;
+}

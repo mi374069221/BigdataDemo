@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- BEGIN META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Olive Enterprise">
+    <!-- END META -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/china.js"></script>
+
+    <!-- BEGIN SHORTCUT ICON -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- END SHORTCUT ICON -->
+    <title>桥梁监控平台 - QLJK®championsoft数据平台</title>
+    <!-- BEGIN STYLESHEET-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- BOOTSTRAP CSS -->
+    <link href="../css/bootstrap-reset.css" rel="stylesheet">
+    <!-- BOOTSTRAP CSS -->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- FONT AWESOME ICON CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- THEME BASIC CSS -->
+    <link href="../css/style-responsive.css" rel="stylesheet">
+    <!-- THEME RESPONSIVE CSS -->
+    <link href="../assets/morris.js-0.4.3/morris.css" rel="stylesheet">
+    <!-- MORRIS CHART CSS -->
+    <!--dashboard calendar-->
+    <link href="../css/clndr.css" rel="stylesheet">
+    <!-- CALENDER CSS -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js">
+    </script>
+    <script src="../js/respond.min.js">
+    </script>
+    <![endif]-->
+    <!-- END STYLESHEET-->
+
+</head>
+<body>
+<!-- BEGIN SECTION -->
+<section id="container">
+    <!-- BEGIN HEADER -->
+    <header class="header white-bg">
+        <!-- SIDEBAR TOGGLE BUTTON -->
+        <div class="sidebar-toggle-box">
+            <div data-placement="right" class="fa fa-bars tooltips"></div>
+        </div>
+        <!-- SIDEBAR TOGGLE BUTTON  END-->
+        <a href="index.html" class="logo"> CHAMPIONSOFT <span> QLJK </span><span>
+					桥梁监控平台 </span>
+        </a>
+        <!-- START HEADER  NAV -->
+
+        <nav class="nav notify-row" id="top_menu">
+
+            <ul class="nav top-menu">
+                <!-- START NOTIFY TASK BAR -->
+
+
+                <!-- START NOTIFY INBOX BAR -->
+
+                <li id="header_inbox_bar" class="dropdown"><a
+                        data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
+                        class="fa fa-envelope-o"> </i> <span class="badge bg-important">
+								5 </span>
+                </a>
+                    <ul class="dropdown-menu extended inbox">
+                        <li class="notify-arrow notify-arrow-blue"></li>
+                        <li>
+                            <p class="blue">You have 5 new messages</p>
+                        </li>
+                        <li><a href="#"> <span class="photo"> <img
+                                alt="avatar" src="./img/logo-white.png">
+								</span> <span class="subject"> <span class="from">
+											Chintan Pandya </span> <span class="time"> Just now </span>
+								</span> <span class="message"> Hello, this is an example msg. </span>
+                        </a></li>
+                        <li><a href="#"> <span class="photo"> <img
+                                alt="avatar" src="./img/logo-white.png">
+								</span> <span class="subject"> <span class="from"> Parth
+											Jani </span> <span class="time"> 10 mins </span>
+								</span> <span class="message"> Hi, Bro how are you ? </span>
+                        </a></li>
+                        <li><a href="#"> <span class="photo"> <img
+                                alt="avatar" src="./img/logo-white.png">
+								</span> <span class="subject"> <span class="from"> Jay
+											Bardolia </span> <span class="time"> 3 hrs </span>
+								</span> <span class="message"> This is awesome dashboard. </span>
+                        </a></li>
+                        <li><a href="#"> <span class="photo"> <img
+                                alt="avatar" src="./img/logo-white.png">
+								</span> <span class="subject"> <span class="from"> CoderMI
+											BLACK </span> <span class="time"> Just now </span>
+								</span> <span class="message"> Hello, this is metrolab </span>
+                        </a></li>
+                        <li><a href="#"> See all messages </a></li>
+                    </ul>
+                </li>
+                <!-- END NOTIFY INBOX BAR -->
+
+                <!-- START NOTIFY NOTIFICATION BAR -->
+
+                <li id="header_notification_bar" class="dropdown"><a
+                        data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
+                        class="fa fa-bell-o"> </i> <span class="badge bg-warning">
+								7 </span>
+                </a>
+                    <ul class="dropdown-menu extended notification">
+                        <li class="notify-arrow notify-arrow-blue"></li>
+                        <li>
+                            <p class="blue">You have 7 new notifications</p>
+                        </li>
+                        <li><a href="#"> <span class="label label-danger">
+										<i class="fa fa-bolt"> </i>
+								</span> Server #3 overloaded. <span class="small italic"> 34
+										mins </span>
+                        </a></li>
+                        <li><a href="#"> <span class="label label-warning">
+										<i class="fa fa-bell"> </i>
+								</span> Server #10 not respoding. <span class="small italic"> 1
+										Hours </span>
+                        </a></li>
+                        <li><a href="#"> <span class="label label-danger">
+										<i class="fa fa-bolt"> </i>
+								</span> Database overloaded 24%. <span class="small italic"> 4
+										hrs </span>
+                        </a></li>
+                        <li><a href="#"> <span class="label label-success">
+										<i class="fa fa-plus"> </i>
+								</span> New user registered. <span class="small italic"> Just
+										now </span>
+                        </a></li>
+                        <li><a href="#"> <span class="label label-primary">
+										<i class="fa fa-bullhorn"> </i>
+								</span> Application error. <span class="small italic"> 10 mins </span>
+                        </a></li>
+                        <li><a href="#"> See all notifications </a></li>
+                    </ul>
+                </li>
+                <!-- END NOTIFY NOTIFICATION BAR -->
+
+            </ul>
+
+
+        </nav>
+        <!-- END HEADER NAV -->
+
+        <!-- START USER LOGIN DROPDOWN  -->
+
+        <div class="top-nav ">
+            <ul class="nav pull-right top-menu">
+                <li><input type="text" class="form-control search"
+                           placeholder="Search"></li>
+                <li class="dropdown"><a data-toggle="dropdown"
+                                        class="dropdown-toggle" href="#"> <img alt=""
+                                                                               src="../img/dami.png"> <span
+                        class="username">
+								CoderMi </span> <b class="caret"> </b>
+                </a>
+                    <ul class="dropdown-menu extended logout">
+                        <li class="log-arrow-up"></li>
+                        <li><a href="#"> <i class=" fa fa-suitcase"> </i>
+                            Profile
+                        </a></li>
+                        <li><a href="#"> <i class="fa fa-cog"> </i> Settings
+                        </a></li>
+                        <li><a href="#"> <i class="fa fa-bell-o"> </i>
+                            Notification
+                        </a></li>
+                        <li><a href="login.html"> <i class="fa fa-key"> </i> Log
+                            Out
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- END USER LOGIN DROPDOWN  -->
+    </header>
+    <!-- END HEADER -->
+    <!-- BEGIN SIDEBAR -->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li><a href="index.html" class="active"> <i
+                        class="fa fa-dashboard"> </i> <span> 监控首页 </span>
+                </a></li>
+
+                <li class="sub-menu"><a href="javascript:;"> <i
+                        class="fa fa-book"> </i> <span> 可视化系统 </span>
+                </a>
+                    <ul class="sub">
+                        <li><a href="flow-trend.html"> 实时温度 </a></li>
+                        <li><a href="flow-contract.html"> 实时风速 </a></li>
+                        <li><a href="flow-online.html"> 实时重力 </a></li>
+                        <li><a href="flow-detail.html"> 实时震动频率 </a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu"><a href="javascript:;"> <i
+                        class="fa fa-th"> </i> <span> 告警系统 </span>
+                </a>
+                    <ul class="sub">
+                        <li><a href="#"> 温度告警 </a></li>
+                        <li><a href="#"> 水位告警 </a></li>
+                        <li><a href="#"> 重力告警 </a></li>
+                        <li><a href="#"> 位移度告警 </a></li>
+                        <li><a href="#"> 倾斜度告警 </a></li>
+                        <li><a href="#"> 沉降度告警 </a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu"><a href="javascript:;"> <i
+                        class="fa fa-book"> </i> <span> 监控分析 </span>
+                </a>
+                    <ul class="sub">
+                        <li><a href="flow-trend.html"> 温度分析 </a></li>
+                        <li><a href="flow-contract.html"> 风速分析 </a></li>
+                        <li><a href="flow-contract.html"> 重力分析 </a></li>
+                        <li><a href="flow-contract.html"> 水位分析 </a></li>
+                        <li><a href="flow-online.html"> 自震频率 </a></li>
+                        <li><a href="flow-detail.html"> 桥墩位移度 </a></li>
+                        <li><a href="flow-detail.html"> 桥墩沉降度 </a></li>
+                        <li><a href="flow-detail.html"> 桥墩倾斜移度 </a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+    </aside>
+    <!-- END SIDEBAR -->
+
+
+    <!-- BEGIN MAIN CONTENT -->
+    <section id="main-content">
+        <!-- BEGIN WRAPPER  -->
+        <section class="wrapper">
+
+            <!-- 流量概况表 开始 -->
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <section class="panel">
+                        <!--<%&#45;&#45;<div class="panel-body">
+                        &lt;!&ndash; 为ECharts准备一个具备大小（宽高）的Dom &ndash;&gt;
+                        <div>
+                            <span><h3>桥梁信息概况</h3></span>
+                        </div>
+                        <div id="trendtable" style="width: 90%;">
+                            <table id='pv_table' class="table table-bordered" margin=auto>
+                                <thead style='font-weight: bold'>
+                                <tr>
+                                    <td>日期</td>
+                                    <td>IP</td>
+                                    <td>最高温度</td>
+                                    <td>最低温度</td>
+                                    <td>今日天气</td>
+                                    <td>今日风向</td>
+                                    <td>今日水位</td>
+                                    <td>最大风速</td>
+                                    <td>最小风速</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2019/09/11</td>
+                                    <td>192.168.2.200</td>
+                                    <td>23℃</td>
+                                    <td>15℃</td>
+                                    <td>晴天</td>
+                                    <td>东北风</td>
+                                    <td>8</td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>2019/09/12</td>
+                                    <td>192.168.2.201</td>
+                                    <td>28℃</td>
+                                    <td>23℃</td>
+                                    <td>阴天</td>
+                                    <td>东北风</td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>2019/09/13</td>
+                                    <td>192.168.2.202</td>
+                                    <td>26℃</td>
+                                    <td>21℃</td>
+                                    <td>多云</td>
+                                    <td>西北风</td>
+                                    <td>7</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>&#45;&#45;%>
+
+                        &lt;!&ndash; 内容正文 &ndash;&gt;
+                        <%&#45;&#45; <div>
+                        <span id=localtime style=" font-size:14px; position: absolute; right: 30px; top:-20px; "></span>
+                    </div>
+
+                        <div class="row" >
+                            <div id="listData_01" class="col-lg-6 col-sm-6">
+                                <ul class="xm_cszs">
+
+                                    <li>日期:<span>10</span></li>
+                                    <li>最高温度:<span>10</span>度</li>
+                                    <li>最低温度：<span>1</span>度</li>
+                                    <li>当前风向：<span>1</span></li>
+
+                                </ul>
+                            </div>
+                            <div id="listData_02" class="col-lg-6 col-sm-6">
+                                <ul class="xm_cszs">
+                                    <li>最大风速:<span>140</span>级</li>
+                                    <li>最小风速：<span>120</span>级</li>
+                                    <li>当前水位：<span>1</span>米</li>
+
+                                </ul>
+                            </div>
+
+                        </div>&#45;&#45;%>-->
+
+
+                    </section>
+                    <div class="con left">
+                        <!--选择时间-->
+                        <div class="select_time">
+                            <div class="static_top left">
+                                <i></i><span>总体概况</span>
+                            </div>
+                        </div>
+                        <!--数据总概-->
+                        <div class="con_div">
+                            <div class="con_div_text left">
+                                <div class="con_div_text01 left">
+                                    <img src="../img/info_2.png" class="left text01_img"/>
+                                    <div class="left text01_div">
+                                        <p>车辆总数(辆)</p>
+                                        <p>12356</p>
+                                    </div>
+                                </div>
+                                <div class="con_div_text01 right">
+                                    <img src="../img/info_2.png" class="left text01_img"/>
+                                    <div class="left text01_div">
+                                        <p>车辆使用数(辆)</p>
+                                        <p>12356</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con_div_text left">
+                                <div class="con_div_text01 left">
+                                    <img src="../img/info_4.png" class="left text01_img"/>
+                                    <div class="left text01_div">
+                                        <p>行驶里程总数(km)</p>
+                                        <p class="sky">12356</p>
+                                    </div>
+                                </div>
+                                <div class="con_div_text01 right">
+                                    <img src="../img/info_5.png" class="left text01_img"/>
+                                    <div class="left text01_div">
+                                        <p>行驶里程平均数(km)</p>
+                                        <p class="sky">12356</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con_div_text left">
+
+                                <div class="con_div_text01 left">
+                                    <img src="../img/info_6.png" class="left text01_img"/>
+                                    <div class="left text01_div">
+                                        <p>行驶时长总数(s)</p>
+                                        <p class="org">12356</p>
+                                    </div>
+                                </div>
+                                <div class="con_div_text01 right">
+                                    <img src="../img/info_7.png" class="left text01_img"/>
+                                    <div class="left text01_div">
+                                        <p>行驶ihfj平均数(s)</p>
+                                        <p class="org">12356</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 流量概况表 结束-->
+                <!-- 折线图 row 开始 -->
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <section class="panel">
+                            <div class="panel-body">
+                                <div id="main" style="width: 100%; height: 500px;">
+                                </div>
+                                <script type="text/javascript">
+                                    // 基于准备好的dom，初始化echarts实例
+                                    var myChart = echarts.init(document.getElementById('main'));
+                                    var dataMap = {};
+                                    function dataFormatter(obj) {
+                                        var pList = ['北明桥','天和桥','河畔桥','山水桥','长江桥','辽远桥','吉祥桥','龙江桥','上紫桥','江与桥 ','西山桥','甘露桥','青海桥','宁静桥 ','新新桥'];
+                                        var temp;
+                                        for (var year = 1; year <= 12; year++) {
+                                            var max = 0;
+                                            var sum = 0;
+                                            temp = obj[year];
+                                            for (var i = 0, l = temp.length; i < l; i++) {
+                                                max = Math.max(max, temp[i]);
+                                                sum += temp[i];
+                                                obj[year][i] = {
+                                                    name : pList[i],
+                                                    value : temp[i]
+                                                }
+                                            }
+                                            obj[year + 'max'] = Math.floor(max / 100) * 100;
+                                            obj[year + 'sum'] = sum;
+                                        }
+                                        return obj;
+                                    }
+
+
+
+                                    dataMap.dataPI = dataFormatter({
+                                        //max : 4000,
+                                        12:[136.27,159.72,2905.73,641.42,1306.3,1915.57,1277.44,1701.5,124.94,3064.78,1583.04,2015.31,1612.24,1391.07,3973.85,3512.24,2569.3,2768.03,2665.2,2047.23,659.23,844.52,2983.51,726.22,1411.01,74.47,1220.9,678.75,155.08,184.14,1139.03],
+                                        11:[124.36,145.58,2562.81,554.48,1095.28,1631.08,1050.15,1302.9,114.15,2540.1,1360.56,1729.02,1363.67,1206.98,3588.28,3258.09,2147,2325.5,2286.98,1675.06,539.83,685.38,2482.89,625.03,1108.38,68.72,988.45,599.28,134.92,159.29,1078.63],
+                                        10:[118.29,128.85,2207.34,477.59,929.6,1414.9,980.57,1154.33,113.82,2261.86,1163.08,1495.45,1182.74,1098.66,3226.64,2769.05,1795.9,1969.69,9.27,1458.49,462.19,606.8,2240.61,550.27,1067.6,63.88,789.64,497.05,107.4,127.25,759.74],
+                                        9:[112.83,122.58,2034.59,313.58,907.95,1302.02,916.72,1088.94,111.8,2100.11,1095.96,1418.09,1158.17,1060.38,3002.65,2658.78,1780,1892.4,1973.05,1453.75,436.04,575.4,2216.15,539.19,1020.56,60.62,753.72,462.27,105.57,118.94,691.07],
+                                        8:[101.26,110.19,1804.72,311.97,762.1,1133.42,783.8,915.38,101.84,1816.31,986.02,1200.18,1002.11,905.77,2509.14,2217.66,1378,1626.48,1695.57,1241.35,361.07,482.39,2032,446.38,837.35,54.89,592.63,387.55,83.41,97.89,628.72],
+                                        7:[88.8,103.35,1461.81,276.77,634.94,939.43,672.76,750.14,93.81,1545.05,925.1,1011.03,865.98,786.14,2138.9,1916.74,1140.41,1272.2,1532.17,1032.47,323.48,386.38,1595.48,382.06,724.4,50.9,484.81,334,67.55,79.54,527.8],
+                                        6:[88.68,112.38,1400,262.42,589.56,882.41,625.61,684.6,90.26,1461.51,892.83,966.5,827.36,727.37,1963.51,1892.01,1082.13,1100.65,1428.27,912.5,300.75,463.4,1481.14,368.94,661.69,48.04,435.77,308.06,65.34,72.07,509.99],
+                                        5:[87.36,105.28,1370.43,276.3,522.8,798.43,568.69,605.79,83.45,1367.58,814.1,950.5,786.84,664.5,1778.45,1649.29,1020.09,1022.45,1248.59,817.88,278.76,428.05,1379.93,334.5,607.75,44.3,387.88,286.78,60.7,65.33,461.26],
+                                        4:[84.11,89.91,1064.05,215.19,420.1,615.8,488.23,504.8,81.02,1162.45,717.85,749.4,692.94,560,1480.67,1198.7,798.35,886.47,1072.91,658.78,244.29,339.06,1128.61,298.69,494.6,40.7,302.66,237.91,48.47,55.63,412.9],
+                                        3:[82.44,84.21,956.84,197.8,374.69,590.2,446.17,474.2,79.68,1110.44,685.2,783.66,664.78,535.98,1390,1288.36,707,847.25,1015.08,601.99,222.89,317.87,1047.95,281.1,463.44,39.75,282.21,215.51,47.31,52.95,305],
+                                        2:[101.26,110.19,1804.72,311.97,762.1,1133.42,783.8,915.38,101.84,1816.31,986.02,1200.18,1002.11,905.77,2509.14,2217.66,1378,1626.48,1695.57,1241.35,361.07,482.39,2032,446.38,837.35,54.89,592.63,387.55,83.41,97.89,628.72],
+                                        1:[88.68,112.38,1400,262.42,589.56,882.41,625.61,684.6,90.26,1461.51,892.83,966.5,827.36,727.37,1963.51,1892.01,1082.13,1100.65,1428.27,912.5,300.75,463.4,1481.14,368.94,661.69,48.04,435.77,308.06,65.34,72.07,509.99]
+
+                                    });
+
+                                    dataMap.dataSI = dataFormatter({
+                                        //max : 26600,
+                                        12:[3752.48,5928.32,13126.86,6635.26,8037.69,12152.15,5611.48,5962.41,7927.89,25203.28,16555.58,8309.38,9069.2,6390.55,24017.11,15427.08,9815.94,9361.99,26447.38,5675.32,714.5,5543.04,11029.13,2194.33,3780.32,208.79,6935.59,2377.83,975.18,1056.15,3225.9],
+                                        11:[3388.38,4840.23,10707.68,5234,6367.69,9976.82,4506.31,5025.15,7218.32,21753.93,14297.93,6436.62,7522.83,5122.88,21238.49,13226.38,7767.24,7343.19,23014.53,4511.68,571,4359.12,8672.18,1800.06,3223.49,163.92,5446.1,1984.97,744.63,827.91,2592.15],
+                                        10:[2855.55,3987.84,8959.83,3993.8,5114,7906.34,3541.92,4060.72,6001.78,18566.37,11908.49,4905.22,6005.3,3919.45,18901.83,11010.5,6038.08,5687.19,19419.7,3381.54,443.43,3448.77,6711.87,1476.62,2582.53,136.63,4236.42,1527.24,575.33,662.32,1929.59],
+                                        9:[2626.41,3709.78,8701.34,4242.36,4376.19,7158.84,3097.12,4319.75,6085.84,16993.34,11567.42,4198.93,5318.44,3554.81,17571.98,10259.99,5082.07,5028.93,18502.2,3037.74,423.55,3057.78,5823.39,1370.03,2452.75,115.56,3861.12,1470.34,557.12,609.98,2070.76],
+                                        8:[2509.4,2892.53,7201.88,3454.49,3193.67,5544.14,2475.45,3695.58,5571.06,14471.26,10154.25,3370.96,4476.42,2975.53,14647.53,8282.83,4143.06,3977.72,16004.61,2425.29,364.26,2368.53,4648.79,1124.79,2038.39,98.48,2986.46,1279.32,419.03,455.04,1647.55],
+                                        7:[2191.43,2457.08,6110.43,2755.66,2374.96,4566.83,1915.29,3365.31,4969.95,12282.89,8511.51,2711.18,3695.04,2419.74,12574.03,6724.61,3365.08,3187.05,13469.77,1878.56,308.62,1871.65,3775.14,967.54,1705.83,80.1,2452.44,1043.19,331.91,351.58,1459.3],
+                                        6:[2026.51,2135.07,5271.57,2357.04,1773.21,3869.4,1580.83,2971.68,4381.2,10524.96,7164.75,2245.9,3175.92,1917.47,10478.62,5514.14,2852.12,2612.57,11356.6,1510.68,240.83,1564,3067.23,821.16,1426.42,63.52,1951.36,838.56,264.61,281.05,1164.79],
+                                        5:[1853.58,1685.93,4301.73,1919.4,1248.27,3061.62,1329.68,2487.04,3892.12,8437.99,6250.38,1844.9,2770.49,1566.4,8478.69,4182.1,2320.6,2190.54,9280.73,1253.7,205.6,1376.91,2489.4,681.5,1281.63,52.74,1553.1,713.3,211.7,244.05,914.47],
+                                        4:[1487.15,1337.31,3417.56,1463.38,967.49,2898.89,1098.37,2084.7,3209.02,6787.11,5096.38,1535.29,2340.82,1204.33,6485.05,3310.14,1956.02,1777.74,7592.78,984.08,175.82,1135.31,2014.8,569.37,1047.66,47.64,1221.17,572.02,171.92,194.27,719.54],
+                                        3:[1249.99,1069.08,2911.69,1134.31,754.78,2609.85,943.49,1843.6,2622.45,5604.49,4090.48,1337.04,2036.97,941.77,5184.98,2768.75,1709.89,1523.5,6143.4,846.89,148.88,958.87,1733.38,481.96,934.88,32.72,1007.56,501.69,144.51,153.06,603.15],
+                                        2:[2626.41,3709.78,8701.34,4242.36,4376.19,7158.84,3097.12,4319.75,6085.84,16993.34,11567.42,4198.93,5318.44,3554.81,17571.98,10259.99,5082.07,5028.93,18502.2,3037.74,423.55,3057.78,5823.39,1370.03,2452.75,115.56,3861.12,1470.34,557.12,609.98,2070.76],
+                                        1:[2026.51,2135.07,5271.57,2357.04,1773.21,3869.4,1580.83,2971.68,4381.2,10524.96,7164.75,2245.9,3175.92,1917.47,10478.62,5514.14,2852.12,2612.57,11356.6,1510.68,240.83,1564,3067.23,821.16,1426.42,63.52,1951.36,838.56,264.61,281.05,1164.79]
+
+                                    });
+
+                                    dataMap.dataTI = dataFormatter({
+                                        //max : 25000,
+                                        12:[12363.18,5219.24,8483.17,3960.87,5015.89,8158.98,3679.91,4918.09,11142.86,20842.21,14180.23,4975.96,6878.74,3921.2,17370.89,7991.72,7247.02,7539.54,24097.7,3998.33,1148.93,3623.81,7014.04,2781.29,3701.79,322.57,4355.81,1963.79,540.18,861.92,2245.12],
+                                        11:[10600.84,4238.65,7123.77,3412.38,4209.03,6849.37,3111.12,4040.55,9833.51,17131.45,12063.82,4193.69,5850.62,3121.4,14343.14,6607.89,6053.37,6369.27,20711.55,3383.11,953.67,2881.08,6030.41,2177.07,2892.31,274.82,3688.93,1536.5,470.88,702.45,1766.69],
+                                        10:[9179.19,3405.16,6068.31,2886.92,3696.65,5891.25,2756.26,3371.95,8930.85,13629.07,9918.78,3662.15,5048.49,2637.07,11768.18,5700.91,5127.12,5402.81,18052.59,2919.13,748.59,2474.44,5198.8,1885.79,2519.62,240.85,3143.74,1363.27,398.54,563.74,1587.72],
+                                        9:[8375.76,2886.65,5276.04,2759.46,3212.06,5207.72,2412.26,2905.68,7872.23,11888.53,8799.31,3234.64,4346.4,2355.86,10358.64,5099.76,4466.85,4633.67,16321.46,2529.51,643.47,2160.48,4561.69,1652.34,2218.81,218.67,2699.74,1234.21,355.93,475,1421.38],
+                                        8:[7236.15,2250.04,4600.72,2257.99,2467.41,4486.74,2025.44,2493.04,6821.11,9730.91,7613.46,2789.78,3770,1918.95,8620.24,4511.97,3812.34,3835.4,14076.83,2156.76,528.84,1825.21,3881.6,1312.94,1896.78,188.06,2178.2,1037.11,294.91,366.18,1246.89],
+                                        7:[5837.55,1902.31,3895.36,1846.18,1934.35,3798.26,1687.07,2096.35,5508.48,7914.11,6281.86,2390.29,3022.83,1614.65,7187.26,3721.44,3111.98,3229.42,11585.82,1835.12,433.57,1649.2,3319.62,989.38,1557.91,159.76,1806.36,900.16,249.04,294.78,1058.16],
+                                        6:[4854.33,1658.19,3340.54,1611.07,1542.26,3295.45,1413.83,1857.42,4776.2,6612.22,5360.1,2137.77,2551.41,1411.92,5924.74,3181.27,2655.94,2882.88,9772.5,1560.92,377.17,1440.32,2836.73,815.32,1374.62,137.24,1546.59,787.36,213.37,259.49,929.41],
+                                        5:[4092.27,1319.76,2805.47,1375.67,1270,2811.95,1223.64,1657.77,4097.26,5198.03,4584.22,1963.9,2206.02,1225.8,4764.7,2722.4,2292.55,2428.95,8335.3,1361.92,335.3,1229.62,2510.3,661.8,1192.53,123.3,1234.6,688.41,193.7,227.73,833.36],
+                                        4:[3435.95,1150.81,2439.68,1176.65,1000.79,2487.85,1075.48,1467.9,3404.19,4493.31,3890.79,1638.42,1949.91,1043.08,4112.43,2358.86,2.08,1995.78,7178.94,1178.25,293.85,1081.35,2189.68,558.28,1013.76,96.76,1063.89,589.91,169.81,195.46,753.91],
+                                        3:[2982.57,997.47,2149.75,992.69,811.47,2258.17,958.88,1319.4,3038.9,3891.92,3227.99,1399.02,1765.8,972.73,3700.52,1978.37,1795.93,1780.79,6343.94,1074.85,270.96,956.12,1943.68,480.37,914.5,89.56,963.62,514.83,148.83,171.14,704.5],
+                                        2:[7236.15,2250.04,4600.72,2257.99,2467.41,4486.74,2025.44,2493.04,6821.11,9730.91,7613.46,2789.78,3770,1918.95,8620.24,4511.97,3812.34,3835.4,14076.83,2156.76,528.84,1825.21,3881.6,1312.94,1896.78,188.06,2178.2,1037.11,294.91,366.18,1246.89],
+                                        1:[4092.27,1319.76,2805.47,1375.67,1270,2811.95,1223.64,1657.77,4097.26,5198.03,4584.22,1963.9,2206.02,1225.8,4764.7,2722.4,2292.55,2428.95,8335.3,1361.92,335.3,1229.62,2510.3,661.8,1192.53,123.3,1234.6,688.41,193.7,227.73,833.36]
+
+
+                                    });
+
+
+
+                                    option = {
+                                        baseOption: {
+                                            timeline: {
+                                                // y: 0,
+                                                axisType: 'category',
+                                                // realtime: false,
+                                                // loop: false,
+                                                autoPlay: true,
+                                                // currentIndex: 2,
+                                                playInterval: 1000,
+                                                // controlStyle: {
+                                                //     position: 'left'
+                                                // },
+                                                data: [
+                                                    '2019-01-01','2019-02-01','2019-03-01',
+                                                    {
+                                                        value: '2019-04-01',
+                                                        tooltip: {
+                                                            formatter: '{b} 幅度达到一个高度'
+                                                        },
+                                                        symbol: 'diamond',
+                                                        symbolSize: 16
+                                                    },
+                                                    '2019-05-01', '2019-06-01','2019-07-01','2019-08-01','2019-09-01',
+                                                    {
+                                                        value: '2019-10-01',
+                                                        tooltip: {
+                                                            formatter: function (params) {
+                                                                return params.name + '幅度达到又一个高度';
+                                                            }
+                                                        },
+                                                        symbol: 'diamond',
+                                                        symbolSize: 18
+                                                    },
+                                                    '2019-11-01','2019-12-01'
+                                                ],
+                                                label: {
+                                                    formatter : function(s) {
+                                                        return (new Date(s)).getMonth()+1+"月份";
+                                                    }
+                                                }
+                                            },
+                                            title: {
+                                                subtext: '数据来自结构传感器'
+                                            },
+                                            tooltip: {
+                                            },
+                                            legend: {
+                                                x: 'right',
+                                                data: ['桥墩沉降度', '桥墩位移度', '桥墩倾斜度'],
+                                                selected: {
+                                                    // '幅度': false,
+                                                }
+                                            },
+                                            calculable : true,
+                                            grid: {
+                                                top: 80,
+                                                bottom: 100,
+                                                tooltip: {
+                                                    trigger: 'axis',
+                                                    axisPointer: {
+                                                        type: 'shadow',
+                                                        label: {
+                                                            show: true,
+                                                            formatter: function (params) {
+                                                                return params.value.replace('\n', '');
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            xAxis: [
+                                                {
+                                                    'type':'category',
+                                                    'axisLabel':{'interval':0},
+                                                    'data':[
+                                                        '北明桥','\n天和桥','河畔桥','\n山水桥','长江桥','\n辽远桥','吉祥桥',
+                                                        '\n龙江桥','上紫桥','\n江与桥 ','西山桥','\n甘露桥','青海桥','\n宁静桥 ','新新桥'
+                                                    ],
+                                                    splitLine: {show: false}
+                                                }
+                                            ],
+                                            yAxis: [
+                                                {
+                                                    type: 'value',
+                                                    name: '幅度（cm）'
+                                                }
+                                            ],
+                                            series: [
+                                                {name: '桥墩沉降度', type: 'bar'},
+                                                {name: '桥墩位移度', type: 'bar'},
+                                                {name: '桥墩倾斜度', type: 'bar'},
+                                                {
+                                                    name: '幅度占比',
+                                                    type: 'pie',
+                                                    center: ['75%', '35%'],
+                                                    radius: '28%',
+                                                    z: 100
+                                                }
+                                            ]
+                                        },
+                                        options: [
+                                            {
+                                                title: {text: '2019年1月全市桥梁结构数据'},
+                                                series: [
+                                                    {data: dataMap.dataPI['1']},
+                                                    {data: dataMap.dataSI['1']},
+                                                    {data: dataMap.dataTI['1']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['1sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['1sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['1sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年2月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['2']},
+                                                    {data: dataMap.dataSI['2']},
+                                                    {data: dataMap.dataTI['2']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['2sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['2sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['2sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年3月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['3']},
+                                                    {data: dataMap.dataSI['3']},
+                                                    {data: dataMap.dataTI['3']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['3sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['3sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['3sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年4月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['4']},
+                                                    {data: dataMap.dataSI['4']},
+                                                    {data: dataMap.dataTI['4']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['4sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['4sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['4sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年5月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['5']},
+                                                    {data: dataMap.dataSI['5']},
+                                                    {data: dataMap.dataTI['5']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['5sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['5sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['5sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年6月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['6']},
+                                                    {data: dataMap.dataSI['6']},
+                                                    {data: dataMap.dataTI['6']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['6sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['6sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['6sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年7月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['7']},
+                                                    {data: dataMap.dataSI['7']},
+                                                    {data: dataMap.dataTI['7']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['7sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['7sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['7sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年8月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['8']},
+                                                    {data: dataMap.dataSI['8']},
+                                                    {data: dataMap.dataTI['8']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['8sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['8sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['8sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年9月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['9']},
+                                                    {data: dataMap.dataSI['9']},
+                                                    {data: dataMap.dataTI['9']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['9sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['9sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['9sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年10月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['10']},
+                                                    {data: dataMap.dataSI['10']},
+                                                    {data: dataMap.dataTI['10']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['10sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['10sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['10sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年11月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['11']},
+                                                    {data: dataMap.dataSI['11']},
+                                                    {data: dataMap.dataTI['11']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['11sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['11sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['11sum']}
+                                                    ]}
+                                                ]
+                                            },
+                                            {
+                                                title : {text: '2019年12月全市桥梁结构数据'},
+                                                series : [
+                                                    {data: dataMap.dataPI['12']},
+                                                    {data: dataMap.dataSI['12']},
+                                                    {data: dataMap.dataTI['12']},
+                                                    {data: [
+                                                        {name: '桥墩沉降度', value: dataMap.dataPI['12sum']},
+                                                        {name: '桥墩位移度', value: dataMap.dataSI['12sum']},
+                                                        {name: '桥墩倾斜度', value: dataMap.dataTI['12sum']}
+                                                    ]}
+                                                ]
+                                            }
+                                        ]
+                                    };
+
+                                    myChart.setOption(option);
+
+                                </script>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+                <!-- 折线图 row 结束 -->
+
+                <!-- BEGIN ROW  最近7天日平均PV量-->
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                        <section class="panel">
+                            <div class="panel-body">
+                                <div id="main1" style="width: 100%; height: 400px;"></div>
+                                <script type="text/javascript">
+                                    $(document)
+                                        .ready(
+                                            function () {
+                                                var myChart1 = echarts
+                                                    .init(document
+                                                        .getElementById('main1'));
+                                                // 显示标题，图例和空的坐标轴
+                                                myChart1
+                                                    .setOption({
+                                                        title: {
+                                                            text: '最近7天日平均温度',
+                                                            subtext: '数据来自温度传感器'
+                                                        },
+                                                        tooltip: {},
+                                                        legend: {
+                                                            data: ['日平均温度']
+                                                        },
+                                                        xAxis: {
+                                                            data: []
+                                                        },
+                                                        yAxis: {},
+                                                        series: [{
+                                                            name: '日平均温度',
+                                                            type: 'bar',
+                                                            data: []
+                                                        }]
+                                                    });
+                                                //loading 动画
+                                                myChart1.showLoading();
+                                                // 异步加载数据
+                                                $
+                                                    .get(
+                                                        'http://localhost:8080/avgPvNum')
+                                                    .done(
+                                                        function (data) {
+                                                            // 填入数据
+                                                            myChart1
+                                                                .setOption({
+                                                                    xAxis: {
+                                                                        data: data.dates
+                                                                    },
+                                                                    series: [{
+                                                                        // 根据名字对应到相应的系列
+                                                                        name: 'PV量',
+                                                                        data: data.data
+                                                                    }]
+                                                                });
+                                                            //数据加载完成后再调用 hideLoading 方法隐藏加载动画
+                                                            myChart1
+                                                                .hideLoading();
+                                                        });
+                                            });
+                                </script>
+
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <section class="panel">
+                            <div class="panel-body">
+
+                                <div id="main2" style="width: 600px; height: 400px;"
+                                     align="center"></div>
+                                <script type="text/javascript">
+                                    // 基于准备好的dom，初始化echarts实例
+                                    var myChart2 = echarts.init(document
+                                        .getElementById('main2'));
+                                    function randomData() {
+                                        now = new Date(+now + oneDay);
+                                        var valueName = now.getFullYear() + '/' + (now.getMonth() + 1) + '/' + now.getDate() +
+                                            ' ' + (now.getHours() >= 10 ? now.getHours() : '0' + now.getHours()) + ':' +
+                                            (now.getMinutes() >= 10 ? now.getMinutes() : '0' + now.getMinutes()) +
+                                            ':' + (now.getSeconds() >= 10 ? now.getSeconds() : '0' + now.getSeconds());
+
+                                        $.get('http://localhost:8080/gravityData',{startTime:valueName}).done(function (data) {
+                                            value=data.values;
+                                        })
+
+                                        return {
+                                            name: now.toString(),
+                                            value: [
+                                                valueName,
+                                                Math.round(value)
+                                            ]
+                                        }
+                                    }
+
+                                    var data = [];
+                                    var now = +new Date()-60*1000;
+                                    var oneDay = 1000;
+                                    var value =null;
+                                    for (var i = 0; i < 60; i++) {
+                                        data.push(randomData());
+                                    }
+
+                                    var temp = 59;
+
+                                    option = {
+                                        title: {
+                                            text: '实时重力监测',
+                                            subtext: '数据来自重力传感器'
+                                        },
+                                        tooltip: {
+                                            trigger: 'axis',
+                                            formatter: function(params) {
+                                                params = params[0];
+                                                var date = new Date(params.name);
+                                                return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate() + ':' + date.getHours()+":"+ date.getMinutes()+":"+ date.getSeconds()+ ':' +  params.value[1];
+                                            },
+                                            axisPointer: {
+                                                animation: false
+                                            }
+                                        },
+                                        xAxis: {
+                                            type: 'time',
+                                            splitLine: {
+                                                show: false
+                                            },
+                                            triggerEvent: true
+                                        },
+                                        yAxis: {
+                                            type: 'value',
+                                            boundaryGap: [0, '100%'],
+                                            splitLine: {
+                                                show: false
+                                            }
+                                        },
+                                        series: [{
+                                            name: '实时数据',
+                                            type: 'line',
+                                            showSymbol: false,
+                                            hoverAnimation: false,
+                                            markPoint: {
+                                                data: []
+                                            }
+
+                                        }]
+                                    };
+
+                                    setInterval(function() {
+
+                                        data.shift();
+                                        data.push(randomData());
+
+                                        myChart2.setOption({
+                                            series: [{
+                                                data: data,
+                                                markLine: {
+                                                    data: [
+                                                        [{
+                                                            symbol: 'none',
+                                                            x: '92%',
+                                                            yAxis: data[temp].value[1]
+                                                        }, {
+                                                            symbol: 'circle',
+                                                            label: {
+                                                                normal: {
+                                                                    position: 'start',
+                                                                    formatter: '实时\n{c}'
+                                                                }
+                                                            },
+                                                            name: '实时重力',
+                                                            value: data[temp].value[1],
+                                                            xAxis: data[temp].value[0],
+                                                            yAxis: data[temp].value[1]
+                                                        }]
+                                                    ]
+                                                }
+                                            }]
+                                        });
+                                    }, 1000);
+
+
+                                    myChart2.setOption(option);
+                                </script>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+                <!-- END ROW  -->
+
+
+                <!-- 动态加载数据示例 开始-->
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <section class="panel">
+                            <div class="panel-body">
+                                <div id="main3" style="width: 100%; height: 400px;"></div>
+                                <script type="text/javascript">
+                                    // 基于准备好的dom，初始化echarts实例
+                                    var myChart3 = echarts.init(document
+                                        .getElementById('main3'));
+
+                                    function randomData1() {
+                                        now1 = new Date(+now1+ oneDay1);
+                                        var valueName1 = now1.getFullYear() + '/' + (now1.getMonth() + 1) + '/' + now1.getDate() +
+                                            ' ' + (now1.getHours() >= 10 ? now1.getHours() : '0' + now1.getHours()) + ':' +
+                                            (now1.getMinutes() >= 10 ? now1.getMinutes() : '0' + now1.getMinutes()) +
+                                            ':' + (now1.getSeconds() >= 10 ? now1.getSeconds() : '0' + now1.getSeconds());
+                                        $.get('http://localhost:8080/allData',{StartTime:valueName1}).done(function (datas) {
+                                            temperature=datas.temperatureValues;
+                                            windSpeed = datas.windSpeedValues;
+                                            windDirection=datas.windDirectionValues;
+                                            frequency=datas.frequencyValues;
+                                            waterLevel=datas.waterLevelValues;
+                                            // console.log(temperature);
+                                        })
+
+                                        return {
+                                            name: now1.toString(),
+                                            value: [
+                                                valueName1,
+                                                temperature,
+                                                windSpeed,
+                                                windDirection,
+                                                frequency,
+                                                waterLevel
+                                            ]
+                                        }
+                                    }
+
+                                    var data1 = [];
+                                    var now1 = +new Date()-59*1000;
+                                    var oneDay1 = 1000;
+                                    var temperature ='';
+                                    var windSpeed='';
+                                    var windDirection='';
+                                    var frequency='';
+                                    var waterLevel='';
+                                    for (var i = 0; i < 60; i++) {
+                                        data1.push(randomData1());
+                                    }
+                                    var temp1 = 59;
+
+                                    setInterval(function() {
+
+                                        data1.shift();
+                                        data1.push(randomData1());
+                                        console.log(data1[temp1].value[3])
+                                        myChart3.setOption({
+                                            xAxis: {
+                                                data:data1[temp1].value[0]
+                                            },
+                                            series: [{
+                                                name:'温度',
+                                                data:data1,
+                                            },{
+                                                name:'风速',
+                                                data:data1,
+
+                                            },{
+                                                data:data1,
+                                                name:'风向',
+                                                // xAxis: data1[temp1].value[0],
+                                                // yAxis: data1[temp1].value[1]
+                                            },{   data:data1,
+                                                name:'震动频率',
+                                                //xAxis: data1[temp1].value[0],
+                                                //yAxis: data1[temp1].value[2]
+                                            },{  data:data1,
+                                                name:'水位',
+                                                //xAxis: data1[temp1].value[0],
+                                                //yAxis: data1[temp1].value[2]
+                                            }]
+                                            /*markLine: {
+                                                data: [
+                                                    [{
+                                                        symbol: 'none',
+                                                        x: '96.3%',
+                                                        yAxis: data1[temp1].value[1]
+                                                    }, {
+                                                        symbol: 'circle',
+                                                        label: {
+                                                            normal: {
+                                                                position: 'start',
+                                                                formatter: '当前温度\n{c}'
+                                                            }
+                                                        },
+                                                        name: '温度',
+                                                        value: data1[temp1].value[1],
+                                                        xAxis: data1[temp1].value[0]
+                                                        yAxis: data1[temp1].value[1]
+                                                    }]
+                                                ]
+                                            }*/
+
+                                        });
+                                    }, 1000);
+
+                                    // 指定图表的配置项和数据
+                                    option = {
+                                        title: {
+                                            text: '桥梁实时指标监测',
+                                            //subtext: '数据来自传感器'
+                                        },
+                                        tooltip : {
+                                            trigger: 'axis',
+                                            axisPointer: {
+                                                type: 'cross',
+                                                label: {
+                                                    backgroundColor: '#6a7985'
+                                                }
+                                            }
+                                        },
+                                        legend: {
+                                            data:['温度','风速','风向','震动频率','水位']
+                                        },
+                                        toolbox: {
+                                            feature: {
+                                                saveAsImage: {}
+                                            }
+                                        },
+                                        grid: {
+                                            left: '3%',
+                                            right: '4%',
+                                            bottom: '3%',
+                                            containLabel: true
+                                        },
+                                        xAxis : [
+                                            {
+                                                type : 'time',
+                                                //boundaryGap : false,
+                                                splitLine: {
+                                                    show: false
+                                                },
+                                                triggerEvent: false,
+                                                data : []
+                                            }
+                                        ],
+                                        yAxis : [
+                                            {
+                                                type : 'value'
+                                            }
+                                        ],
+                                        series : [
+                                            {
+                                                name:'温度',
+                                                type:'line',
+                                                stack: '总量',
+                                                areaStyle: {},
+                                                data:[]
+                                            },
+                                            {
+                                                name:'风速',
+                                                type:'line',
+                                                stack: '总量',
+                                                areaStyle: {},
+                                                data:[]
+                                            },
+                                            {
+                                                name:'风向',
+                                                type:'line',
+                                                stack: '总量',
+                                                areaStyle: {},
+                                                data:[]
+                                            },
+                                            {
+                                                name:'震动频率',
+                                                type:'line',
+                                                stack: '总量',
+                                                areaStyle: {normal: {}},
+                                                data:[]
+                                            },
+                                            {
+                                                name:'水位',
+                                                type:'line',
+                                                stack: '总量',
+                                                label: {
+                                                    normal: {
+                                                        show: true,
+                                                        position: 'top'
+                                                    }
+                                                },
+                                                areaStyle: {normal: {}},
+                                                data:[]
+                                            }
+                                        ]
+                                    };
+                                    myChart3.setOption(option);
+
+                                    // 异步加载数据
+                                    //myChart4.readLoading();
+                                    /*$.get('http://localhost:8080/flowNum').done(function (data) {
+                                        // 填入数据
+                                        myChart4.setOption({
+                                            xAxis: {
+                                                data: data.dates
+                                            },
+                                            series: [{
+                                                name: '',
+                                                data: data.uvs
+                                            }, {
+                                                name: '',
+                                                data: data.new_uvs
+                                            }]
+                                        });
+                                        myChart4.hideLoading();
+                                    });*/
+
+                                </script>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- 动态加载数据示例 结束-->
+            </div>
+        </section>
+        <!-- END WRAPPER  -->
+    </section>
+    <!-- END MAIN CONTENT -->
+    <!-- BEGIN FOOTER -->
+    <footer class="site-footer">
+        <div class="text-center">
+            2019 &copy; QLJK by <a href="www.championsoft.cn" target="_blank"> www.championsoft.cn
+        </a> <a href="www.championsoft.cn" class="go-top"> <i
+                class="fa fa-angle-up"> </i>
+        </a>
+        </div>
+    </footer>
+    <!-- END  FOOTER -->
+</section>
+<!-- END SECTION -->
+<!-- BEGIN JS -->
+</body>
+<!-- BASIC JQUERY 1.8.3 LIB. JS -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- BOOTSTRAP JS -->
+<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
+<!-- ACCORDIN JS -->
+<script src="../js/jquery.scrollTo.min.js"></script>
+<!-- SCROLLTO JS -->
+<script src="../js/jquery.nicescroll.js"></script>
+<!-- NICESCROLL JS -->
+<script src="../js/respond.min.js"></script>
+<!-- RESPOND JS -->
+<script src="../js/jquery.sparkline.js"></script>
+<!-- SPARKLINE JS -->
+<script src="../js/sparkline-chart.js"></script>
+<!-- SPARKLINE CHART JS -->
+<script src="../js/common-scripts.js"></script>
+<!-- BASIC COMMON JS -->
+<script src="../js/count.js"></script>
+<!-- COUNT JS -->
+<!--Morris-->
+<script src="../assets/morris.js-0.4.3/morris.min.js"></script>
+<!-- MORRIS JS -->
+<script src="../assets/morris.js-0.4.3/raphael-min.js"></script>
+<!-- MORRIS  JS -->
+<script src="../js/chart.js"></script>
+<!-- CHART JS -->
+<!--Calendar-->
+<script src="../js/calendar/clndr.js"></script>
+<!-- CALENDER JS -->
+<script src="../js/calendar/evnt.calendar.init.js"></script>
+<!-- CALENDER EVENT JS -->
+<script src="../js/calendar/moment-2.2.1.js"></script>
+<!-- CALENDER MOMENT JS -->
+<!-- UNDERSCORE JS -->
+<script src="../assets/jquery-knob/js/jquery.knob.js"></script>
+<!-- JQUERY KNOB JS -->
+</html>

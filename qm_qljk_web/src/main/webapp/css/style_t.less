@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+a{
+    text-decoration: none;
+    color: #25f4e6;
+}
+ul{
+    list-style: none;
+}
+// 左边公共封装
+.li-left(){
+    padding:15px  0 15px 40px;
+    width: 50%;
+    height: 100%;
+    float: left;
+    img{
+       float: left;
+       margin: 0 10px 0 10px;
+    }
+    p{
+        margin: -3px 0  5px  20px;
+        color: #fff;
+        font-size: 12px;
+    }
+    span{
+        font-size: 22px;
+        font-weight: 700;
+        color: #ffff42;
+}
+}
+// 右边公共封装
+.li-right(){
+    float: right;
+    padding:15px  0 15px 40px;
+    width: 50%;
+    height: 100%;
+    img{
+       float: left;
+       margin-right: 10px;
+    }
+    p{
+        color: #fff;
+        font-size: 12px;
+    }
+    span{
+        font-size: 22px;
+        font-weight: 700;
+        color: #ffff42;
+    }
+}
+
+// 清浮动
+.clearfix:before,
+.clearfix:after {
+         	   content: "";
+         	   display: table;
+      	  }
+       	 .clearfix:after {
+        	    clear: both;
+       	 }
+      	  .clearfix {
+         	   *zoom: 1;
+            }
+            
+.pad {
+    padding-left: 5px;
+}
+
+// 大框
+.lichenggaikuang{
+    width: 100%;
+    height:230px ;
+    background: #081832;
+    // 顶部
+    .top{
+        padding: 40px 0 50px 0;
+        position: relative;
+       .top-left{
+        a{
+            float: left;
+            width: 130px;
+            height: 30px;
+            line-height: 30px;
+            margin-left:30px;
+            background: #04425f;
+            border-radius: 3px;
+            box-shadow: 0px 1px 3px 1px #59c0e4;
+            img{
+                float: left;
+                margin: 2px 0 0 10px;
+                width: 25px;
+                height: 25px;
+            }
+            span{
+                padding-left: 10px;
+                font-size: 16px;
+
+                }
+          
+        }
+       }
+       .top-right{
+        position: absolute;
+        display: flex;
+        top: 20%;
+        right: 3%;
+        padding: 10px 1px;
+        width: 285px;
+        height: 75px;
+        background: #142132;
+        border-radius: 3px;
+        box-shadow: 0px 1px 5px 0px #59c0e4;
+    }
+           .time,
+           .weather{
+             flex:1;
+           }
+           .time{
+               color: #cedef7;
+               border-right:1px solid #cedef7 ;
+              .day{
+                  text-align: center;
+                  margin:0px 0  5px 0;
+                span{
+                    font-size: 22px;
+                    color:#fff
+                   }
+              }
+               .week{
+                   padding-left: 10px;
+                i{
+                    float: left;
+                    font-style: normal;
+                    font-size: 12px;
+                   
+                    }
+               }
+               }
+           }
+    .weather{
+               display: flex;
+               img{
+                   margin-top: 8px;
+                   margin-left: 8px;
+                   width: 45px;
+                   height: 35px;
+               }
+                p{
+                    padding-left: 8px;
+                    color:#cedef7;
+                    font-size: 12px;
+                    &:first-child{
+                        margin-top: 3px;
+                    }
+                
+                }
+               
+               
+           }
+       }
+    
+    // 下部三块
+    .bottom{
+        ul{
+            display: flex;
+            li{
+                padding: 0 10px;
+                flex: 1;
+                
+                .box-color{
+                    height: 100%;
+                    background: #034c6a;
+                }
+                .left-1{
+                    .li-left();
+                    }
+                   .right-1{
+                    .li-right();
+                    }
+              
+            
+                .left-2{
+                    .li-left();
+                    span{
+                        color: #25f3e6;
+                    }
+                    }
+                    .right-2{
+                     .li-right();
+                     span{
+                        color: #25f3e6;
+                    }
+                     }
+                
+               
+                .left-3{
+                    .li-left();
+                    span{
+                       color: #ff4e4c;
+                   }
+                    }
+                   .right-3{
+                    .li-right();
+                    span{
+                       color: #ff4e4c;
+                   }
+                     }
+                
+        }
+    }
+}
+
+
+
